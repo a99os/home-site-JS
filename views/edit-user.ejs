@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <h1>Userni tahrirlash</h1>
+    <form
+      action="/user/edit-user/<%=user.id%>?_method=PUT"
+      method="post"
+      id="post-form"
+    >
+      <label for="name">Name</label><br />
+      <input
+        type="text"
+        value="<%= user.name%>"
+        name="name"
+        id="name"
+      /><br /><br />
+      <label for="username">Username</label><br />
+      <input
+        type="text"
+        value="<%= user.username%>"
+        name="username"
+        id="username"
+      /><br /><br />
+      <label for="email">Email</label><br />
+      <input
+        type="email"
+        value="<%= user.email%>"
+        name="email"
+        id="email"
+      /><br /><br />
+      <label for="phone">Phone</label><br />
+      <input
+        type="tel"
+        value="<%= user.phone%>"
+        name="phone"
+        id="phone"
+      /><br /><br />
+      <button type="submit">Saqlash</button>
+    </form>
+  </body>
+</html>

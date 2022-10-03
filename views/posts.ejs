@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <h1>Posts Page</h1>
+    <ol>
+      <%posts.forEach((post)=>{%>
+      <li><a href="post/<%=post.id%>"><%=post.title%></a></li>
+      <%})%>
+    </ol>
+    
+  </body>
+</html>

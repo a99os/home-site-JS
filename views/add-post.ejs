@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <h1>New post</h1>
+    <form action="/add-post" method="post" id="post-form">
+      <label for="title">Title</label><br />
+      <input type="text" name="title" id="title" /><br /><br />
+      <label for="body">Body</label><br />
+      <input type="body" name="body" id="body" /><br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

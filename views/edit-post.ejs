@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <h1>Userni tahrirlash</h1>
+    <form
+      action="/edit-post/<%=post.id%>?_method=PUT"
+      method="post"
+      id="post-form"
+    >
+      <label for="title">Title</label><br />
+      <input
+        type="text"
+        value="<%= post.title%>"
+        name="title"
+        id="title"
+      /><br /><br />
+      <label for="body">Body</label><br />
+      <input
+        type="text"
+        value="<%= post.body%>"
+        name="body"
+        id="body"
+      /><br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+[
+  { "name": "SMM manager", "company": "Premium Elite", "salary": 700 },
+  { "name": "Sotuv manager", "company": "Nextgen Academy", "salary": 500 },
+  { "name": "Fronted developer", "company": "Betoola ", "salary": 4000 },
+  {
+    "name": "Tizim Administratori",
+    "company": "Micros Development ",
+    "salary": 500
+  },
+  { "name": "CopyWriter", "company": "IDU Universiteti", "salary": 400 },
+  {
+    "name": "Full Stack developer",
+    "company": "NAPA Automotive",
+    "salary": 1200
+  },
+  { "name": "Backend developer", "company": "UZINFOCOM", "salary": 2300 }
+]

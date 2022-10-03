@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <h1>Post page</h1>
+    <h2><a href="/add-post">Add new Post</a></h2>
+    <h3>Post title: <%= post.title %></h3>
+    <h4>Post body: <%= post.body %></h4>
+
+    <form action="/edit-post/<%= post.id %>">
+      <button type="submit">Edit</button>
+    </form>
+
+    <button data-id="<%=post.id%>" id="del">Delete</button>
+    <script>
+      const del = document.getElementById("del");
+      del.addEventListener("click", (e) => {
+        const id = e.target?.dataset?.id || null;
+        if (id) {
+          fetch(`/post/${id}`, { method: "DELETE" }).then(() => {
+            console.log("DELETED");
+            window.location.href = "/posts";
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

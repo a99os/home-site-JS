@@ -1,0 +1,32 @@
+<style>
+  table {
+    box-shadow: 5px 5px 10px black;
+    text-align: left;
+    border: 2px solid blue;
+  }
+
+  th {
+    margin: 0px;
+    border: 1px solid blue;
+    padding: 10px;
+  }
+  td {
+    margin: 0px;
+    border: 1px solid blue;
+    padding: 10px;
+  }
+</style>
+<table>
+  <tr>
+    <th>Kasb nomi</th>
+    <th>Kompaniya nomi</th>
+    <th>Oylik maosh</th>
+  </tr>
+  <% data.forEach(val=>{%>
+  <tr>
+    <td><%=val.name%></td>
+    <td>"<%=val.company%>"</td>
+    <td><%=val.salary%>$</td>
+  </tr>
+  <%})%>
+</table>
